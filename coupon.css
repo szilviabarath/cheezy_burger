@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, #navbar {
+    background-color: #ff9d3c;
+}
+.coupons {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ff9d3c;
+    height: 100vh;
+}
+
+.coupon-column {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Make all columns have the same width */
+    flex: 1;
+
+    /* OPTIONAL: Space between columns */
+    margin: 0 8px;
+
+    /* OPTIONAL: Border */
+    border: 1px solid rgba(0, 0, 0);
+    border-radius: 4px;
+    padding: 5px;
+
+}
+
+.coupon-column h1 {
+    font-size: 24px;
+}
+
+.coupon-column h2 {
+    margin-top: 45px;
+}
+.coupon-column p{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.coupon-column:hover {
+    background-color: #ffc68d;
+}
+
+@media (max-width: 768px) {
+    html {
+      aspect-ratio: auto;
+    }
+    body {
+    aspect-ratio: auto;
+    }
+
+    #navbar {
+      display: none;
+    }
+    .message-row {
+      justify-content: center;
+      align-items: center;
+      font-size: smaller;
+      display: flex;
+    }
+    h1, h2, h3, h4, h5, h6,p,a {
+      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      margin-bottom:20px;
+      text-align: center;
+    }
+    .coupons {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .coupon-column {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    #contact.footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+}
+}
+
+@media (max-width: 576px) {
+    html {
+        aspect-ratio: auto;
+      }
+      body {
+      aspect-ratio: auto;
+      }
+
+      #navbar {
+        display: none;
+      }
+      .message-row {
+        justify-content: center;
+        align-items: center;
+        font-size: smaller;
+        display: flex;
+        flex-direction: column;
+      }
+      h1, h2, h3, h4, h5, h6,p,a {
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:20px;
+        text-align: center;
+      }
+      .coupons {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          padding: 20px;
+          height: auto;
+          max-width: 100%;
+         flex-wrap: nowrap;
+      }
+
+      .coupon-column {
+          margin-bottom: 20px;
+        display: flex;
+          max-width: 100%;
+      }
+
+      #contact.footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+      }
+  }

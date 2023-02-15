@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cheesy Burger Coupon</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script defer src='main.js'></script>
+    <link rel="icon" type="image/x-icon" href="images/chef.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<link rel='stylesheet' type='text/css' media='screen' href='coupon.css'>
+
+</head>
+<body>
+    <div class="container">
+        <div class="message-row">15% DISCOUNT FOR STUDENTS
+        </div>
+        <div id="navbar">
+            <div class="navbar-left">
+           <a href="index.html">About</a>
+           <a href="menu.html">Menu</a>
+            </div>
+            <div class="navbar-center"><img class="icon" href="#index.html" src="images/burger2.png" height="20px" width="200px"></div>
+            <div class="navbar-right">
+           <a href="#contact">Contact</a>
+           <a href="#offer">Discount</a>
+            </div>
+         </div>
+         <div class="coupons">
+            <!-- Pricing column -->
+            <div class="coupon-column">
+                <!-- Title -->
+                <h1>15% off for students</h1>
+                <!-- Price -->
+                <h2>-15%</h2>
+
+                <!-- Description -->
+                <p>Order a menu and get 15% off. Show your student card and the coupon to the cashier.</p>
+            </div>
+            <div class="coupon-column">
+                <h1>5% off of all menus</h1>
+                <!-- Price -->
+                <h2>-5%</h2>
+
+                <!-- Description -->
+                <p>Order a menu and get 15% off. Show your this coupon to the cashier.</p>
+            </div>
+            <div class="coupon-column">
+                <h1>Free drink</h1>
+                <!-- Price -->
+                <h2>Free</h2>
+
+                <!-- Description -->
+                <p>Show this coupon to the cashier and get a small free drink. </p>
+            </div>
+        </div>
+           <div class="footer" id="contact">
+              <div class="footer-half"><h2>Reserve a table</h2>
+               <div id="error"></div>
+             <form onsubmit="sendEmail(); reset(); return false;">
+                 <label for="meeting-time">Choose a time for your appointment:</label>
+<input type="datetime-local" id="meeting-time"
+      name="meeting-time" value="2022-06-07T19:30"
+      min="2022-06-07T00:00" max="2029-06-14T00:00">
+      <input type="text" class="input_text" id="name" placeholder="Name"></input>
+      <input type="email" id="email" placeholder="Email"></input>
+      <label for="guests"></label>
+
+<input type="number" id="guests" name="guest-nr"
+      min="1" max="12" placeholder="Nr of guests">
+      <input type="submit" id="submit"></input></form>
+
+              </div>
+              <div class="footer-half"><h2>Where to find us</h2>
+               <p class="address">11 Hamburger St., Hamburg</p>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303356.5900580452!2d9.646946890554515!3d53.558243020603086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b161837e1813b9%3A0x4263df27bd63aa0!2sHamburg%2C%20Germany!5e0!3m2!1sen!2sit!4v1654536118289!5m2!1sen!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               <div class="top-container"><a href="#" class="top">Back to Top &#8593;</a></div>
+           </div>
+
+
+
+
+
+           </div>
+         </div>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+         function sendEmail() {
+                       Email.send({
+               Host : "smtp.elasticemail.com",
+               Username : "szilvia.barat@gmail.com",
+               Password : "62C0B15F70B9110FFE5047AE9D724C44AF4A",
+               To : 'szilvia.barat@gmail.com',
+               From : document.getElementById("email").value,
+               Subject : "This is the subject",
+               Body : "And this is the body"
+           }).then(
+           message => alert(message)
+           );
+         }
+     </script>
+</body>
+
+</html>
